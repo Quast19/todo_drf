@@ -39,7 +39,7 @@ def taskCreate(request):
         serializer.save()
     return Response(serializer.data)
 
-@api_view(['POST'])
+@api_view(['POST','GET'])
 def taskUpdate(request,pk):
     task = Task.objects.get(id= pk)
     
